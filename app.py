@@ -14,8 +14,8 @@ app.config.update(
 	MAIL_SERVER='smtp.gmail.com',
 	MAIL_PORT=465,
 	MAIL_USE_SSL=True,
-	MAIL_USERNAME = 'anonymaxdashone@gmail.com',
-	MAIL_PASSWORD = '17571757'
+	MAIL_USERNAME = '',
+	MAIL_PASSWORD = ''
 	)
 mail = Mail(app)
 
@@ -24,7 +24,7 @@ buses = [""]
 def send_mail(email, subject, message):
 	try:
 		msg = Message("My Test Emails!",
-		  sender="anonymaxdashone@gmail.com",
+		  sender="",
 		  recipients=[email])
 		msg.body = message       
 		mail.send(msg)
